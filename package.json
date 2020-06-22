@@ -45,7 +45,7 @@
   "scripts": {
     "start": "npm run test:watch",
     "lint": "gulp lint",
-    "build": "npm run clean && npm run lint && npm run build:core && npm run build:modules",
+    "build": "npm run clean && npm run build:core && npm run build:modules",
     "build:core": "ngc -p scripts/build/tsconfig-core.json",
     "build:modules": "node scripts/build/build.js",
     "clean": "rimraf dist .tmp",
@@ -68,5 +68,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@ionic-native/core": "^5.26.0"
   }
 }
