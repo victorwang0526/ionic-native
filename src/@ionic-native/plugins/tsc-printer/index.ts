@@ -34,7 +34,6 @@ import { Observable } from 'rxjs/Observable';
 })
 @Injectable()
 export class TscPrinter extends IonicNativePlugin {
-
   /**
    * This function does something
    * @param data {string[]} the tsc data
