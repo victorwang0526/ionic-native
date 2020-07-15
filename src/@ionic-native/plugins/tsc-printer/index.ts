@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
+import {Cordova, CordovaProperty, IonicNativePlugin, Plugin} from '@ionic-native/core';
 
 /**
  * @name Tsc Printer
@@ -18,6 +18,19 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 })
 @Injectable()
 export class TscPrinter extends IonicNativePlugin {
+
+  /** Get the tsc print type. 0: USB, 1: REMOTE */
+  @CordovaProperty
+  type: number;
+
+  /** Get the remote ip. */
+  @CordovaProperty
+  ip: string;
+
+  /** Get the remote port. */
+  @CordovaProperty
+  port: number;
+
   /**
    * This function does something
    * @param data {string[]} the tsc data
