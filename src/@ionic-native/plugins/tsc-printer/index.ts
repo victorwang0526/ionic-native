@@ -68,5 +68,13 @@ export class TscPrinter extends IonicNativePlugin {
   validateRemote(ip: string, port: number): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
+  /**
+   * This function does something
+   * @return {Promise<any>} null, if validate false, Toast will show message.
+   */
+  @Cordova()
+  getTscPrinter(): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
 
 }
