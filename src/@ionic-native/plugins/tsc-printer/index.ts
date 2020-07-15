@@ -1,27 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Cordova, CordovaInstance, CordovaProperty, InstanceProperty, IonicNativePlugin, Plugin } from '@ionic-native/core';
-import { Observable } from 'rxjs/Observable';
+import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 
 /**
  * @name Tsc Printer
  * @description
  * This plugin does something
  *
- * @usage
- * ```typescript
- * import { TscPrinter } from '@ionic-native/tsc-printer';
- *
- *
- * constructor(private tscPrinter: TscPrinter) { }
- *
- * ...
- *
- *
- * this.tscPrinter.functionName('Hello', 123)
- *   .then((res: any) => console.log(res))
- *   .catch((error: any) => console.error(error));
- *
- * ```
  */
 @Plugin({
   pluginName: 'TscPrinter',
@@ -37,10 +21,38 @@ export class TscPrinter extends IonicNativePlugin {
   /**
    * This function does something
    * @param data {string[]} the tsc data
-   * @return {Promise<any>} Returns a promise that resolves when something happens
+   * @return {Promise<any>} null
    */
   @Cordova()
   print(data: string[]): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+  /**
+   * This function does something
+   * @return {Promise<any>} null
+   */
+  @Cordova()
+  setUsb(): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+  /**
+   * This function does something
+   * @param ip {string} the remote ip
+   * @param port {number} the remote port
+   * @return {Promise<any>} null
+   */
+  @Cordova()
+  setRemote(ip: string, port: number): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+  /**
+   * This function does something
+   * @param ip {string} the remote ip
+   * @param port {number} the remote port
+   * @return {Promise<any>} null, if validate false, Toast will show message.
+   */
+  @Cordova()
+  validateRemote(ip: string, port: number): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
 
