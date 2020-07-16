@@ -32,7 +32,7 @@ export class TscPrinter extends IonicNativePlugin {
   port: number;
 
   /**
-   * This function does something
+   * print, when setUsb, the printer will print by usb, when setRemote, the printer will print by remote
    * @param data {string[]} the tsc data
    * @return {Promise<any>} null
    */
@@ -42,7 +42,17 @@ export class TscPrinter extends IonicNativePlugin {
   }
 
   /**
-   * This function does something
+   * print by usb
+   * @param data {string[]} the tsc data
+   * @return {Promise<any>} null
+   */
+  @Cordova()
+  usbPrint(data: string[]): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  /**
+   * print by remote
    * @param data {string[]} the tsc data
    * @param ip {string} the remote ip
    * @param port {number} the remote port
@@ -53,7 +63,7 @@ export class TscPrinter extends IonicNativePlugin {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
   /**
-   * This function does something
+   * set printer use usb default
    * @return {Promise<any>} null
    */
   @Cordova()
@@ -61,7 +71,7 @@ export class TscPrinter extends IonicNativePlugin {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
   /**
-   * This function does something
+   * set printer use remote default
    * @param ip {string} the remote ip
    * @param port {number} the remote port
    * @return {Promise<any>} null
@@ -71,18 +81,18 @@ export class TscPrinter extends IonicNativePlugin {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
   /**
-   * This function does something
+   * test remote printer validation
    * @param ip {string} the remote ip
    * @param port {number} the remote port
-   * @return {Promise<any>} null, if validate false, Toast will show message.
+   * @return {Promise<any>} null
    */
   @Cordova()
   validateRemote(ip: string, port: number): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
   /**
-   * This function does something
-   * @return {Promise<any>} null, if validate false, Toast will show message.
+   * get config(type/ip/port)
+   * @return {Promise<any>} null
    */
   @Cordova()
   getTscPrinter(): Promise<any> {
