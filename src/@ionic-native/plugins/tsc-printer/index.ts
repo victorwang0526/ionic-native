@@ -40,6 +40,18 @@ export class TscPrinter extends IonicNativePlugin {
   print(data: string[]): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
+
+  /**
+   * This function does something
+   * @param data {string[]} the tsc data
+   * @param ip {string} the remote ip
+   * @param port {number} the remote port
+   * @return {Promise<any>} null
+   */
+  @Cordova()
+  remotePrint(data: string[], ip: string, port: number): Promise<any> {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
   /**
    * This function does something
    * @return {Promise<any>} null
